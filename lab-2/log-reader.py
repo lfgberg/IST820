@@ -49,10 +49,7 @@ def exerciseA(logFileA, logFileB, outFileName):
     readFilesB = findTerm(readEventsB, ['read(3</'])
 
     repeats = findRepeatingFileInstances(readFilesA, readFilesB)
-
-    # TODO - Timestamps
-
-    table = generateTable(["File Name", "Num Occurances", "Timestamps"], repeats)
+    table = generateRepeatingFileInstancesTable(repeats)
 
     # Save to a text file
     with open(outFileName, "w") as f:
@@ -163,7 +160,6 @@ def generateTable(fieldNames, data):
 
 # Take X instances of read file collections, and return the number of times each file occurs if it's greater than 1
 def findRepeatingFileInstances(*readEvents):
-
     result = {}
 
     # Combine the event collections into one
@@ -171,11 +167,29 @@ def findRepeatingFileInstances(*readEvents):
 
     for event, timestamp in events:
         name = re.search(r'<([^>]+)>', event).group(1)
-        result[name] = result.get(name, 0) + 1
+        
+        if name not in result:
+            result[name] = {"count": 0, "timestamps": []}
+        
+        result[name]["count"] += 1
+        result[name]["timestamps"].append(timestamp)
 
-    result = {key: value for key, value in result.items() if value >= 2}
+    # Filter to only include files that appear more than once
+    result = {key: value for key, value in result.items() if value["count"] >= 2}
 
     return result
+
+# Generataes a table for output G
+def generateRepeatingFileInstancesTable(result):
+    table = PrettyTable()
+    table.field_names = ["File Name", "Count", "Timestamps"]
+
+    for file_name, data in result.items():
+        count = data["count"]
+        timestamps = ", ".join(map(str, data["timestamps"]))  # Convert timestamps list to a comma-separated string
+        table.add_row([file_name, count, timestamps])
+
+    return table
 
 # Returns each line of a file containing one or more given terms in a list of lists
 # [[line, timestamp], [line, timestamp]]
