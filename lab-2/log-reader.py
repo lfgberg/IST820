@@ -36,17 +36,17 @@ def main():
 
 def exerciseA(logFileA, logFileB, outFileName):
     # Find all instances of read events in both files
-    readEventsA = findTerm(' read(', logFileA)
-    readEventsB = findTerm(' read(', logFileB)
+    readEventsA = findTerm(logFileA, [' read('])
+    readEventsB = findTerm(logFileB, [' read('])
 
     # Find instances of read events from the keyboard - /dev/tty
-    readKeyboardsA = findTerm('/dev/tty', readEventsA)
-    readKeyboardsB = findTerm('/dev/tty', readEventsB)
+    readKeyboardsA = findTerm(readEventsA, ['/dev/tty'])
+    readKeyboardsB = findTerm(readEventsB, ['/dev/tty'])
 
     # Find instances of read events from a file
     # 0/3/5, etc. seems to indicate the source of the read, '/' will mean it's a filepath
-    readFilesA = findTerm('read(3</', readEventsA)
-    readFilesB = findTerm('read(3</', readEventsB)
+    readFilesA = findTerm(readEventsA, ['read(3</'])
+    readFilesB = findTerm(readEventsB, ['read(3</'])
 
     repeats = findRepeatingFileInstances(readFilesA, readFilesB)
 
@@ -77,21 +77,21 @@ def exerciseA(logFileA, logFileB, outFileName):
 
 def exerciseB(logFileA, logFileB, outFileName):
     # Find all instances of read events in both files
-    readEventsA = findTerm(' read(', logFileA)
-    readEventsB = findTerm(' read(', logFileB)
+    readEventsA = findTerm(logFileA, [' read('])
+    readEventsB = findTerm(logFileB, [' read('])
 
     # Find instances of read events from the keyboard - /dev/tty
-    readKeyboardsA = findTerm('/dev/tty', readEventsA)
-    readKeyboardsB = findTerm('/dev/tty', readEventsB)
+    readKeyboardsA = findTerm(readEventsA, ['/dev/tty'])
+    readKeyboardsB = findTerm(readEventsB, ['/dev/tty'])
 
     # Find instances of read events from a file
     # 0/3/5, etc. seems to indicate the source of the read, '/' will mean it's a filepath
-    readFilesA = findTerm('read(3</', readEventsA)
-    readFilesB = findTerm('read(3</', readEventsB)
+    readFilesA = findTerm(readEventsA, ['read(3</'])
+    readFilesB = findTerm(readEventsB, ['read(3</'])
 
     # Find read from pipe events
-    readPipesA = findTerm('pipe', readEventsA)
-    readPipesB = findTerm('pipe', readEventsB)
+    readPipesA = findTerm(readEventsA, ['pipe'])
+    readPipesB = findTerm(readEventsB, ['pipe'])
 
     # Start to stub out table content
     result1 = {}
@@ -106,24 +106,24 @@ def exerciseB(logFileA, logFileB, outFileName):
     table1 = generateTable(["Event", "Occurances"], result1)
 
     # Find program start events
-    programStartsA = findTerm('execve', logFileA)
-    programStartsB = findTerm('execve', logFileB)
+    programStartsA = findTerm(logFileA, ['execve'])
+    programStartsB = findTerm(logFileB, ['execve'])
 
     # Find write events
-    programWritesA = findTerm('write', logFileA)
-    programWritesB = findTerm('write', logFileB)
+    programWritesA = findTerm(logFileA, ['execve'])
+    programWritesB = findTerm(logFileB, ['execve'])
 
     # Find get file/directory status events
-    statusChecksA = findTerms(logFileA, "access", "stat")
-    statusChecksB = findTerms(logFileB, "access", "stat")
+    statusChecksA = findTerm(logFileA, ["access", "stat"])
+    statusChecksB = findTerm(logFileB, ["access", "stat"])
 
     # Find unlink events
-    unlinksA = findTerm('unlink', logFileA)
-    unlinksB = findTerm('unlink', logFileB)
+    unlinksA = findTerm(logFileA, ['unlink'])
+    unlinksB = findTerm(logFileB, ['unlink'])
 
     # Find program ends events
-    programEndsA = findTerm('exit_group', logFileA)
-    programEndsB = findTerm('exit_group', logFileB)
+    programEndsA = findTerm(logFileA, ['exit_group'])
+    programEndsB = findTerm(logFileB, ['exit_group'])
 
     # Build out table 2
     # Start to stub out table content
@@ -175,29 +175,16 @@ def findRepeatingFileInstances(*readEvents):
 
     return result
 
-# Returns each line of a file containing a given term
-def findTerm(term, logFile):
-
+# Returns each line of a file containing one or more given terms
+def findTerm(logFile, terms):
     result = []
 
     for line in logFile:
-        if term in line:
+        if any(term in line for term in terms):
             result.append(line)
 
-    return result
-
-# Returns each line of a file containing a given terms
-def findTerms(logFile, *terms):
-
-    result = []
-
-    for line in logFile:
-        for term in terms:
-            if term in line:
-                result.append(line)
-
     # Dedup
-    return set(result)
+    return list(set(result))
 
 # Loads a file and returns the lines in a collection
 def loadFile(fileName):
