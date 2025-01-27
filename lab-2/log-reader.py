@@ -36,8 +36,8 @@ def main():
 
 def exerciseA(logFileA, logFileB, outFileName):
     # Find all instances of read events in both files
-    readEventsA = findTerm(logFileA, [' read('])
-    readEventsB = findTerm(logFileB, [' read('])
+    readEventsA = findTermInLog(logFileA, [' read('])
+    readEventsB = findTermInLog(logFileB, [' read('])
 
     # Find instances of read events from the keyboard - /dev/tty
     readKeyboardsA = findTerm(readEventsA, ['/dev/tty'])
@@ -50,35 +50,33 @@ def exerciseA(logFileA, logFileB, outFileName):
 
     repeats = findRepeatingFileInstances(readFilesA, readFilesB)
 
-    # TODO - print repeats as a table
-    # TODO - print the other outputs
     # TODO - Timestamps
 
-    table = generateTable(["File Name", "Num Occurances"], repeats)
+    table = generateTable(["File Name", "Num Occurances", "Timestamps"], repeats)
 
     # Save to a text file
     with open(outFileName, "w") as f:
         f.write("Output A:\n")
         f.write("Number of read events:" + str(len(readEventsA)) + "\n")
-        f.write(str(readEventsA) + "\n")
+        f.write(formatEvents(readEventsA) + "\n")
         f.write("Output B:\n")
         f.write("Number of read events:" + str(len(readEventsB)) + "\n")
-        f.write(str(readEventsB) + "\n")
+        f.write(formatEvents(readEventsB) + "\n")
         f.write("Output C:\n")
-        f.write(str(readKeyboardsA) + "\n")
+        f.write(formatEvents(readKeyboardsA) + "\n")
         f.write("Output D:\n")
-        f.write(str(readKeyboardsB) + "\n")
+        f.write(formatEvents(readKeyboardsB) + "\n")
         f.write("Output E:\n")
-        f.write(str(readFilesA) + "\n")
+        f.write(formatEvents(readFilesA) + "\n")
         f.write("Output F:\n")
-        f.write(str(readFilesB) + "\n")
+        f.write(formatEvents(readFilesB) + "\n")
         f.write("Output G:\n")
         f.write(table.get_string() + "\n")
 
 def exerciseB(logFileA, logFileB, outFileName):
     # Find all instances of read events in both files
-    readEventsA = findTerm(logFileA, [' read('])
-    readEventsB = findTerm(logFileB, [' read('])
+    readEventsA = findTermInLog(logFileA, [' read('])
+    readEventsB = findTermInLog(logFileB, [' read('])
 
     # Find instances of read events from the keyboard - /dev/tty
     readKeyboardsA = findTerm(readEventsA, ['/dev/tty'])
@@ -106,24 +104,24 @@ def exerciseB(logFileA, logFileB, outFileName):
     table1 = generateTable(["Event", "Occurances"], result1)
 
     # Find program start events
-    programStartsA = findTerm(logFileA, ['execve'])
-    programStartsB = findTerm(logFileB, ['execve'])
+    programStartsA = findTermInLog(logFileA, ['execve'])
+    programStartsB = findTermInLog(logFileB, ['execve'])
 
     # Find write events
-    programWritesA = findTerm(logFileA, ['execve'])
-    programWritesB = findTerm(logFileB, ['execve'])
+    programWritesA = findTermInLog(logFileA, ['execve'])
+    programWritesB = findTermInLog(logFileB, ['execve'])
 
     # Find get file/directory status events
-    statusChecksA = findTerm(logFileA, ["access", "stat"])
-    statusChecksB = findTerm(logFileB, ["access", "stat"])
+    statusChecksA = findTermInLog(logFileA, ["access", "stat"])
+    statusChecksB = findTermInLog(logFileB, ["access", "stat"])
 
     # Find unlink events
-    unlinksA = findTerm(logFileA, ['unlink'])
-    unlinksB = findTerm(logFileB, ['unlink'])
+    unlinksA = findTermInLog(logFileA, ['unlink'])
+    unlinksB = findTermInLog(logFileB, ['unlink'])
 
     # Find program ends events
-    programEndsA = findTerm(logFileA, ['exit_group'])
-    programEndsB = findTerm(logFileB, ['exit_group'])
+    programEndsA = findTermInLog(logFileA, ['exit_group'])
+    programEndsB = findTermInLog(logFileB, ['exit_group'])
 
     # Build out table 2
     # Start to stub out table content
@@ -149,6 +147,10 @@ def exerciseB(logFileA, logFileB, outFileName):
 def pullExNames(*logFiles):
     print("What the sigma")
 
+# Takes in a collection of [[line, timestamp], [line, timestamp]] and returns a string of all the lines
+def formatEvents(events):
+    return "\n".join(event[0] for event in events)
+
 # Takes in a set of headers and data and builds/returns a table
 def generateTable(fieldNames, data):
     table = PrettyTable()
@@ -167,7 +169,7 @@ def findRepeatingFileInstances(*readEvents):
     # Combine the event collections into one
     events = [event for events in readEvents for event in events]
 
-    for event in events:
+    for event, timestamp in events:
         name = re.search(r'<([^>]+)>', event).group(1)
         result[name] = result.get(name, 0) + 1
 
@@ -175,16 +177,26 @@ def findRepeatingFileInstances(*readEvents):
 
     return result
 
-# Returns each line of a file containing one or more given terms
-def findTerm(logFile, terms):
+# Returns each line of a file containing one or more given terms in a list of lists
+# [[line, timestamp], [line, timestamp]]
+def findTermInLog(logFile, terms):
     result = []
 
-    for line in logFile:
+    for timestamp, line in enumerate(logFile, start=1):
         if any(term in line for term in terms):
-            result.append(line)
+            result.append([line.strip(), timestamp])
 
-    # Dedup
-    return list(set(result))
+    return result
+
+# Returns each line of output from findTermInLog containing one or more given terms
+def findTerm(events, terms):
+    result = []
+
+    for line, timestamp in events:
+        if any(term in line for term in terms):
+            result.append([line, timestamp])
+
+    return result
 
 # Loads a file and returns the lines in a collection
 def loadFile(fileName):
