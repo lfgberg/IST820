@@ -137,12 +137,63 @@ def exerciseB(logFileA, logFileB, outFileName):
 
     table2 = generateTable(["Event", "Occurances"], result2)
 
-    print(table1)
-    print(table2)
+    result3 = findExecutableOccurances(programStartsA, programStartsB)
+    table3 = generateExecutableTable(result3)
 
-# Takes X log files and returns the names of all executables
-def pullExNames(*logFiles):
-    print("What the sigma")
+    writeEventsA = findTermInLog(logFileA, ['write('])
+    writeEventsB = findTermInLog(logFileB, ['write('])
+
+    writeTTYA = findTerm(writeEventsA, ['tty'])
+    writeTTYB = findTerm(writeEventsB, ['tty'])
+
+    writeContentA = extractContent(writeTTYA)
+    writeContentB = extractContent(writeTTYB)
+
+    readContentA = extractContent(readKeyboardsA)
+    readContentB = extractContent(readKeyboardsB)
+
+    # Save to a text file
+    with open(outFileName, "w") as f:
+        f.write("Output A:\n")
+        f.write(table1.get_string() + "\n")
+        f.write("Output B:\n")
+        f.write(table2.get_string() + "\n")
+        f.write("Output C:\n")
+        f.write(table3.get_string() + "\n")
+        f.write("Output D:\n")
+        f.write("Content read from the keyboard:\n")
+        f.write(formatEvents(readContentA)+ "\n")
+        f.write("Content printed to the terminal:\n")
+        f.write(formatEvents(writeContentA) + "\n")
+        f.write("Output E:\n")
+        f.write("Content read from the keyboard:\n")
+        f.write(formatEvents(readContentB) + "\n")
+        f.write("Content printed to the terminal:\n")
+        f.write(formatEvents(writeContentB) + "\n")
+
+def extractContent(events):
+
+    result = []
+
+    for event, timestamp in events:
+        content = re.search(r'\([^\)]+\s*,\s*"([^"]+)"\s*,', event)
+
+        if content:
+            result.append(content.group(1))
+
+    return result
+
+# Generates a table from the results of findExecutableOccurances()
+def generateExecutableTable(executables):
+    table = PrettyTable()
+    table.field_names = ["Executable", "Log A Occurances", "Log B Occurances"]
+
+    for executable, timestamps in executables.items():
+        timestamps_a = ", ".join(map(str, timestamps["timestampsA"]))
+        timestamps_b = ", ".join(map(str, timestamps["timestampsB"]))
+        table.add_row([executable, timestamps_a, timestamps_b])
+
+    return(table)
 
 # Takes in a collection of [[line, timestamp], [line, timestamp]] and returns a string of all the lines
 def formatEvents(events):
@@ -157,6 +208,37 @@ def generateTable(fieldNames, data):
         table.add_row([key, value])
 
     return table
+
+# Parses through executable start events to build a dictionary of timestamps in each log file for each executable
+def findExecutableOccurances(eventsA, eventsB):
+    result = {}
+
+    for event, timestamp in eventsA:
+        executable = re.search(r'execve\("([^"]+)"', event)
+
+        if executable:
+            executable = executable.group(1)
+            if executable not in result:
+                result[executable] = {"timestampsA": [], "timestampsB": []}
+            result[executable]["timestampsA"].append(timestamp)
+
+    for event, timestamp in eventsB:
+        executable = re.search(r'execve\("([^"]+)"', event)
+
+        if executable:
+            executable = executable.group(1)
+            if executable not in result:
+                result[executable] = {"timestampsA": [], "timestampsB": []}
+            result[executable]["timestampsB"].append(timestamp)
+
+    # Replace empty timestamp lists with "absent"
+    for executable, timestamps in result.items():
+        if not timestamps["timestampsA"]:
+            timestamps["timestampsA"] = ["absent"]
+        if not timestamps["timestampsB"]:
+            timestamps["timestampsB"] = ["absent"]
+
+    return result
 
 # Take X instances of read file collections, and return the number of times each file occurs if it's greater than 1
 def findRepeatingFileInstances(*readEvents):
