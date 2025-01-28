@@ -53,21 +53,21 @@ def exerciseA(logFileA, logFileB, outFileName):
 
     # Save to a text file
     with open(outFileName, "w") as f:
-        f.write("Output A:\n")
-        f.write("Number of read events:" + str(len(readEventsA)) + "\n")
-        f.write(formatEvents(readEventsA) + "\n")
-        f.write("Output B:\n")
-        f.write("Number of read events:" + str(len(readEventsB)) + "\n")
-        f.write(formatEvents(readEventsB) + "\n")
-        f.write("Output C:\n")
-        f.write(formatEvents(readKeyboardsA) + "\n")
-        f.write("Output D:\n")
-        f.write(formatEvents(readKeyboardsB) + "\n")
-        f.write("Output E:\n")
-        f.write(formatEvents(readFilesA) + "\n")
-        f.write("Output F:\n")
-        f.write(formatEvents(readFilesB) + "\n")
-        f.write("Output G:\n")
+        f.write("Output A:\n\n")
+        f.write("Number of read events:" + str(len(readEventsA)) + "\n\n")
+        f.write(formatEvents(readEventsA) + "\n\n")
+        f.write("Output B:\n\n")
+        f.write("Number of read events:" + str(len(readEventsB)) + "\n\n")
+        f.write(formatEvents(readEventsB) + "\n\n")
+        f.write("Output C:\n\n")
+        f.write(formatEvents(readKeyboardsA) + "\n\n")
+        f.write("Output D:\n\n")
+        f.write(formatEvents(readKeyboardsB) + "\n\n")
+        f.write("Output E:\n\n")
+        f.write(formatEvents(readFilesA) + "\n\n")
+        f.write("Output F:\n\n")
+        f.write(formatEvents(readFilesB) + "\n\n")
+        f.write("Output G:\n\n")
         f.write(table.get_string() + "\n")
 
 def exerciseB(logFileA, logFileB, outFileName):
@@ -154,22 +154,22 @@ def exerciseB(logFileA, logFileB, outFileName):
 
     # Save to a text file
     with open(outFileName, "w") as f:
-        f.write("Output A:\n")
-        f.write(table1.get_string() + "\n")
-        f.write("Output B:\n")
-        f.write(table2.get_string() + "\n")
-        f.write("Output C:\n")
-        f.write(table3.get_string() + "\n")
-        f.write("Output D:\n")
-        f.write("Content read from the keyboard:\n")
-        f.write(formatEvents(readContentA)+ "\n")
-        f.write("Content printed to the terminal:\n")
-        f.write(formatEvents(writeContentA) + "\n")
-        f.write("Output E:\n")
-        f.write("Content read from the keyboard:\n")
-        f.write(formatEvents(readContentB) + "\n")
-        f.write("Content printed to the terminal:\n")
-        f.write(formatEvents(writeContentB) + "\n")
+        f.write("Output A:\n\n")
+        f.write(table1.get_string() + "\n\n")
+        f.write("Output B:\n\n")
+        f.write(table2.get_string() + "\n\n")
+        f.write("Output C:\n\n")
+        f.write(table3.get_string() + "\n\n")
+        f.write("Output D:\n\n")
+        f.write("Content read from the keyboard:\n\n")
+        f.write(formatContents(readContentA) + "\n\n")
+        f.write("Content printed to the terminal:\n\n")
+        f.write(formatContents(writeContentA)+ "\n\n")
+        f.write("Output E:\n\n")
+        f.write("Content read from the keyboard:\n\n")
+        f.write(formatContents(readContentB) + "\n\n")
+        f.write("Content printed to the terminal:\n\n")
+        f.write(formatContents(writeContentB) + "\n")
 
 def extractContent(events):
 
@@ -198,6 +198,10 @@ def generateExecutableTable(executables):
 # Takes in a collection of [[line, timestamp], [line, timestamp]] and returns a string of all the lines
 def formatEvents(events):
     return "\n".join(event[0] for event in events)
+
+# Same as formatEvents but for the content functions
+def formatContents(contents):
+    return "\n".join(content for content in contents)
 
 # Takes in a set of headers and data and builds/returns a table
 def generateTable(fieldNames, data):

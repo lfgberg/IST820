@@ -1,0 +1,233 @@
+Output A:
+
++--------------------------+------------+
+|          Event           | Occurances |
++--------------------------+------------+
+|  Read files from log A   |     27     |
+|  Read files from log B   |     52     |
+| Read keyboard from log A |     79     |
+| Read keyboard from log B |     9      |
+|   Read pipe from log A   |     19     |
+|   Read pipe from log B   |     9      |
++--------------------------+------------+
+
+Output B:
+
++---------------------------+------------+
+|           Event           | Occurances |
++---------------------------+------------+
+| Program starts from log A |     7      |
+| Program starts from log B |     14     |
+| Program writes from log A |     7      |
+| Program writes from log B |     14     |
+|  Status checks from log A |    192     |
+|  Status checks from log B |    342     |
+|  File unlinks from log A  |     4      |
+|  File unlinks from log B  |     0      |
+|  Program ends from log A  |     14     |
+|  Program ends from log B  |     7      |
++---------------------------+------------+
+
+Output C:
+
++--------------------+------------------+------------------+
+|     Executable     | Log A Occurances | Log B Occurances |
++--------------------+------------------+------------------+
+| ./count_keystroke  |        65        |        65        |
+|      /bin/cat      |       164        |     181, 302     |
+|    /usr/bin/id     |       380        |      absent      |
+|     /bin/uname     |       767        |      absent      |
+|   /usr/bin/head    |    1130, 2160    |      absent      |
+|   /usr/bin/tail    |       1484       |      absent      |
+|      /bin/sh       |      absent      |       230        |
+|  /usr/bin/whoami   |      absent      |       359        |
+|   /usr/bin/wget    |      absent      |       474        |
+|      /bin/ls       |      absent      |    740, 1054     |
+|     /bin/chmod     |      absent      |       1008       |
+| ./remote_shell.elf |      absent      |       1323       |
++--------------------+------------------+------------------+
+
+Output D:
+
+Content read from the keyboard:
+
+\r
+i
+d
+\r
+u
+n
+a
+m
+e
+ 
+-
+a
+\r
+h
+e
+a
+d
+ 
+t
+e
+\177
+\177
+u
+s
+e
+\t
+\r
+t
+a
+i
+l
+ 
+u
+s
+e
+r
+\t
+\r
+e
+c
+h
+o
+ 
+\33
+[
+D
+a
+b
+c
+d
+e
+f
+g
+\33
+[
+C
+ 
+>
+ 
+u
+s
+e
+\t
+\r
+h
+e
+a
+d
+ 
+u
+s
+e
+\t
+\r
+
+Content printed to the terminal:
+
+\n
+Try to exec /bin/sh\n
+Read 8 bytes. buf is abcdefg\n
+\n
+No shell for you:(\n
+user@ubuntu:~/test$ 
+i
+d
+\n
+user@ubuntu:~/test$ 
+u
+n
+a
+m
+e
+ 
+-
+a
+\n
+user@ubuntu:~/test$ 
+h
+e
+a
+d
+ 
+t
+e
+\10\33[K
+\10\33[K
+u
+s
+e
+r_file.txt 
+\n
+user@ubuntu:~/test$ 
+t
+a
+i
+l
+ 
+u
+s
+e
+r
+_file.txt 
+\n
+user@ubuntu:~/test$ 
+e
+c
+h
+o
+ 
+\10
+\33[C
+ 
+>
+ 
+u
+s
+e
+r_file.txt 
+\n
+user@ubuntu:~/test$ 
+h
+e
+a
+d
+ 
+u
+s
+e
+r_file.txt 
+\n
+abcdefg\n
+user@ubuntu:~/test$ 
+
+Output E:
+
+Content read from the keyboard:
+
+\r
+
+Content printed to the terminal:
+
+\n
+Try to exec /bin/sh\n
+No shell for you:(\n
+user\n
+connected.\n
+200 OK\n
+Length: 
+249
+ [application/octet-stream]\n
+Saving to: 'remote_shell.elf'\n
+\n
+\r
+\r
+\n
+\n
+total 72\n
+total 72\n
+\n
+user@ubuntu:~/test$ 

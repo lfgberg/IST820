@@ -1,0 +1,463 @@
+Output A:
+
+Number of read events:133
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2179  read(5<pipe:[24655]>,  <unfinished ...>
+2180  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2180  read(0<pipe:[24654]>,  <unfinished ...>
+2179  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2179  read(0</dev/tty1>,  <unfinished ...>
+2179  read(0</dev/tty1>,  <unfinished ...>
+947   read(0</dev/tty1>, "i", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2181  read(3<pipe:[24698]>,  <unfinished ...>
+2181  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2181  read(3</proc/filesystems>, "", 1024) = 0
+2181  read(3</etc/locale.alias>, "# Locale name alias data base.\n#"..., 4096) = 2995
+2181  read(3</etc/locale.alias>, "", 4096) = 0
+2181  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2181  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2181  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "n", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "m", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "-", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2182  read(3<pipe:[24710]>,  <unfinished ...>
+2182  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "t", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\177", 1)     = 1
+947   read(0</dev/tty1>, "\177", 1)     = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(3<pipe:[24720]>, "", 128)    = 0
+947   read(3<pipe:[24729]>, "user_file.txt\n", 128) = 14
+947   read(3<pipe:[24729]>, "", 128)    = 0
+947   read(0</tmp/sh-thd-487363107687375979 (deleted)>, "user_file.txt\n", 128) = 14
+947   read(0</tmp/sh-thd-487363107687375979 (deleted)>, "", 128) = 0
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2185  read(3<pipe:[24738]>,  <unfinished ...>
+2185  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2185  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+947   read(0</dev/tty1>, "t", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "i", 1)        = 1
+947   read(0</dev/tty1>, "l", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "r", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(3<pipe:[24746]>, "", 128)    = 0
+947   read(3<pipe:[24755]>, "user_file.txt\n", 128) = 14
+947   read(3<pipe:[24755]>, "", 128)    = 0
+947   read(0</tmp/sh-thd-974726215050730439 (deleted)>, "user_file.txt\n", 128) = 14
+947   read(0</tmp/sh-thd-974726215050730439 (deleted)>, "", 128) = 0
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2188  read(3<pipe:[24764]>,  <unfinished ...>
+2188  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2188  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "c", 1)        = 1
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "o", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "\"", 1)       = 1
+947   read(0</dev/tty1>, "\"", 1)       = 1
+947   read(0</dev/tty1>, "\33", 1)      = 1
+947   read(0</dev/tty1>, "[", 1)        = 1
+947   read(0</dev/tty1>, "D", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "b", 1)        = 1
+947   read(0</dev/tty1>, "c", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "f", 1)        = 1
+947   read(0</dev/tty1>, "g", 1)        = 1
+947   read(0</dev/tty1>, "\33", 1)      = 1
+947   read(0</dev/tty1>, "[", 1)        = 1
+947   read(0</dev/tty1>, "C", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, ">", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(3<pipe:[24800]>,  <unfinished ...>
+947   read(3<pipe:[24809]>,  <unfinished ...>
+947   read(3<pipe:[24809]>,  <unfinished ...>
+947   read(0</tmp/sh-thd-1949452431612363480 (deleted)>, "user_file.txt\n", 128) = 14
+947   read(0</tmp/sh-thd-1949452431612363480 (deleted)>, "", 128) = 0
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(3<pipe:[24823]>, "", 128)    = 0
+947   read(3<pipe:[24832]>, "user_file.txt\n", 128) = 14
+947   read(3<pipe:[24832]>, "", 128)    = 0
+947   read(0</tmp/sh-thd-3898904863123996143 (deleted)>, "user_file.txt\n", 128) = 14
+947   read(0</tmp/sh-thd-3898904863123996143 (deleted)>, "", 128) = 0
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2195  read(3<pipe:[24841]>,  <unfinished ...>
+2195  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2195  read(3</home/user/test/user_file.txt>, "abcdefg\n", 8192) = 8
+2195  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+947   read(0</dev/tty1>,  <detached ...>
+
+Output B:
+
+Number of read events:118
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2131  read(5<pipe:[24195]>,  <unfinished ...>
+2132  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2133  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2133  read(3</home/user/test/in.txt>, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"..., 131072) = 112
+2133  read(3</home/user/test/in.txt>, "", 131072) = 0
+2132  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2135  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2135  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2135  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2135  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2136  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libuuid.so.1.3.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\25\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libssl.so.1.0.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320^\1\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libcrypto.so.1.0.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\36\6\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libz.so.1.2.8>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\35\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</usr/lib/x86_64-linux-gnu/libidn.so.11.6.15>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p+\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</etc/wgetrc>, "###\n### Sample Wget initializati"..., 4096) = 4096
+2136  read(3</etc/wgetrc>, "ruct = off\n\n# You can turn on re"..., 4096) = 846
+2136  read(3</etc/wgetrc>, "", 4096)    = 0
+2136  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2136  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2136  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2136  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+2136  read(3<socket:[24262]>, "HTTP/1.1 200 OK\r\nServer: nginx/1"..., 252) = 252
+2136  read(3<socket:[24262]>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\2\0>\0\1\0\0\0x\0@\0\0\0\0\0"..., 249) = 249
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2137  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2137  read(3</proc/filesystems>, "", 1024) = 0
+2137  read(4</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2137  read(4</etc/nsswitch.conf>, "", 4096) = 0
+2137  read(4</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2137  read(4</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2137  read(4</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2137  read(4</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2137  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2138  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2139  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2139  read(3</proc/filesystems>, "", 1024) = 0
+2139  read(4</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2139  read(4</etc/nsswitch.conf>, "", 4096) = 0
+2139  read(4</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2139  read(4</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2139  read(4</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2139  read(4</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2139  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2132  read(0<pipe:[24192]>,  <unfinished ...>
+2140  read(3<socket:[24314]>, "WH1\377H\307\306\204t\f\0H\307\302\7\0\0\0I\307\302\"\0\0\0M1\300M1\311H"..., 4096) = 126
+2140  read(5</etc/lsb-release>, "DISTRIB_ID=Ubuntu\nDISTRIB_RELEAS"..., 8191) = 105
+2140  read(5</etc/lsb-release>, "DISTRIB_ID=Ubuntu\nDISTRIB_RELEAS"..., 8191) = 105
+2140  read(3<socket:[24314]>, "\336\243\22G\336\243\22G\336\243\22G\336\243\22G\336\243\22G\336\243\22G\336\243\20d\336\243\22G"..., 65535) = 571
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\317\1\366{x\325\370\332\30\251\263jXv\260\371\243\200\334\231\317\1\366z\317\1\366\23\317\1\366{"..., 65535) = 128
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\275Q\213H\n\205\205\351j\371\316Y*&\315\312\321\320\241\252\275Q\213I\275Q\2130\275Q\213H"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\255\227\363\211\32C\375(z?\266\230:\340\265\v\301\26\331k\255\227\363\210\255\227\363\341\255\227\363\211"..., 65535) = 128
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\361\317\23HF\33\35\351&gVYf\270U\312\235N9\252\361\317\23I\361\317\23 \361\317\23H"..., 65535) = 128
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(5</etc/lsb-release>, "DISTRIB_ID=Ubuntu\nDISTRIB_RELEAS"..., 8191) = 105
+2140  read(3<socket:[24314]>, "\23\242E;\244vK\232\304\n\0*\204\325\3\271\177#o\331\23\242E:\23\242EC\23\242E;"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\307]\305:p\211\313\233\20\365\200+P*\203\270\253\334\357\330\307]\305;\307]\305R\307]\305:"..., 65535) = 128
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "kV\311\177\334\202\307\336\274\376\214n\374!\217\375\7\327\343\235kV\311~kV\311\27kV\311\177"..., 65535) = 128
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "n\337\230M\331\v\226\354\271w\335\\\371\250\336\317\2^\262\257n\337\230Ln\337\2305n\337\230M"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\364\203\177\252CWq\v#+:\273c\3649(\230\2UH\364\203\177\253\364\203\177\322\364\203\177\252"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(4<anon_inode:[eventfd]>, "\1\0\0\0\0\0\0\0", 8) = 8
+2140  read(3<socket:[24314]>, "\324\354Nqc8@\320\3D\v`C\233\10\363\270md\223\324\354Np\324\354N\t\324\354Nq"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\371[\350\374N\217\346].\363\255\355n,\256~\225\332\302\36\371[\350\375\371[\350D\371[\350\374"..., 65535) = 208
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "\205\205\343\3752Q\355\\R-\246\354\22\362\245\177\351\4\311\37\205\205\343\374\205\205\343\205\205\205\343\375"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(3<socket:[24314]>, "p\277\36\370\307k\20Y\247\27[\351\347\310Xz\34>4\32p\277\36\371p\277\36\200p\277\36\370"..., 65535) = 144
+2140  read(3<socket:[24314]>, 0x7ffffffeecc1, 65535) = -1 EAGAIN (Resource temporarily unavailable)
+2140  read(4<anon_inode:[eventfd]>, "\1\0\0\0\0\0\0\0", 8) = 8
+947   read(0</dev/tty1>,  <detached ...>
+
+Output C:
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2179  read(0</dev/tty1>,  <unfinished ...>
+2179  read(0</dev/tty1>,  <unfinished ...>
+947   read(0</dev/tty1>, "i", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "n", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "m", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "-", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "t", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\177", 1)     = 1
+947   read(0</dev/tty1>, "\177", 1)     = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "t", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "i", 1)        = 1
+947   read(0</dev/tty1>, "l", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "r", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "c", 1)        = 1
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "o", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "\"", 1)       = 1
+947   read(0</dev/tty1>, "\"", 1)       = 1
+947   read(0</dev/tty1>, "\33", 1)      = 1
+947   read(0</dev/tty1>, "[", 1)        = 1
+947   read(0</dev/tty1>, "D", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "b", 1)        = 1
+947   read(0</dev/tty1>, "c", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "f", 1)        = 1
+947   read(0</dev/tty1>, "g", 1)        = 1
+947   read(0</dev/tty1>, "\33", 1)      = 1
+947   read(0</dev/tty1>, "[", 1)        = 1
+947   read(0</dev/tty1>, "C", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, ">", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>, "h", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "a", 1)        = 1
+947   read(0</dev/tty1>, "d", 1)        = 1
+947   read(0</dev/tty1>, " ", 1)        = 1
+947   read(0</dev/tty1>, "u", 1)        = 1
+947   read(0</dev/tty1>, "s", 1)        = 1
+947   read(0</dev/tty1>, "e", 1)        = 1
+947   read(0</dev/tty1>, "\t", 1)       = 1
+947   read(0</dev/tty1>, "\r", 1)       = 1
+947   read(0</dev/tty1>,  <detached ...>
+
+Output D:
+
+947   read(0</dev/tty1>, "\r", 1)       = 1
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+2134  read(0</dev/tty1>,  <unfinished ...>
+947   read(0</dev/tty1>,  <detached ...>
+
+Output E:
+
+2180  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2179  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2181  read(3</proc/filesystems>, "", 1024) = 0
+2181  read(3</etc/locale.alias>, "# Locale name alias data base.\n#"..., 4096) = 2995
+2181  read(3</etc/locale.alias>, "", 4096) = 0
+2181  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2181  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2181  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2181  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+2181  read(3</proc/sys/kernel/ngroups_max>, "65536\n", 31) = 6
+2182  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2185  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2185  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+2188  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2188  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+2195  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2195  read(3</home/user/test/user_file.txt>, "abcdefg\n", 8192) = 8
+2195  read(3</home/user/test/user_file.txt>, "", 8192) = 0
+
+Output F:
+
+2132  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2133  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2133  read(3</home/user/test/in.txt>, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"..., 131072) = 112
+2133  read(3</home/user/test/in.txt>, "", 131072) = 0
+2132  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2134  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2135  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2135  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2135  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2135  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libuuid.so.1.3.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\25\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libssl.so.1.0.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320^\1\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libcrypto.so.1.0.0>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\36\6\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libz.so.1.2.8>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\35\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</usr/lib/x86_64-linux-gnu/libidn.so.11.6.15>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p+\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</etc/wgetrc>, "###\n### Sample Wget initializati"..., 4096) = 4096
+2136  read(3</etc/wgetrc>, "ruct = off\n\n# You can turn on re"..., 4096) = 846
+2136  read(3</etc/wgetrc>, "", 4096)    = 0
+2136  read(3</etc/nsswitch.conf>, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 497
+2136  read(3</etc/nsswitch.conf>, "", 4096) = 0
+2136  read(3</lib/x86_64-linux-gnu/libnss_compat-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\22\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnsl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360?\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnss_nis-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260 \0\0\0\0\0\0"..., 832) = 832
+2136  read(3</lib/x86_64-linux-gnu/libnss_files-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+2136  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2136  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+2137  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2137  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2137  read(3</proc/filesystems>, "", 1024) = 0
+2137  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2137  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+2138  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libselinux.so.1>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libc-2.23.so>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libpcre.so.3.13.2>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libdl-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</lib/x86_64-linux-gnu/libpthread-2.23.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+2139  read(3</proc/filesystems>, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+2139  read(3</proc/filesystems>, "", 1024) = 0
+2139  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2845
+2139  read(3</etc/localtime>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 1811
+
+Output G:
+
++---------------------------------------------+-------+-----------------------------------------------------------------------------------+
+|                  File Name                  | Count |                                     Timestamps                                    |
++---------------------------------------------+-------+-----------------------------------------------------------------------------------+
+|      /lib/x86_64-linux-gnu/libc-2.23.so     |   16  | 79, 174, 400, 777, 1140, 1494, 2170, 79, 191, 244, 312, 369, 538, 763, 1021, 1077 |
+|    /lib/x86_64-linux-gnu/libselinux.so.1    |   3   |                                   390, 753, 1067                                  |
+|   /lib/x86_64-linux-gnu/libpcre.so.3.13.2   |   4   |                                409, 487, 772, 1086                                |
+|     /lib/x86_64-linux-gnu/libdl-2.23.so     |   4   |                                417, 557, 780, 1094                                |
+|   /lib/x86_64-linux-gnu/libpthread-2.23.so  |   4   |                                426, 548, 789, 1103                                |
+|              /proc/filesystems              |   6   |                           456, 457, 819, 820, 1133, 1134                          |
+|              /etc/locale.alias              |   2   |                                      469, 470                                     |
+|              /etc/nsswitch.conf             |   6   |                            489, 490, 395, 396, 605, 606                           |
+| /lib/x86_64-linux-gnu/libnss_compat-2.23.so |   3   |                                   498, 404, 614                                   |
+|     /lib/x86_64-linux-gnu/libnsl-2.23.so    |   3   |                                   506, 412, 622                                   |
+|   /lib/x86_64-linux-gnu/libnss_nis-2.23.so  |   3   |                                   522, 428, 638                                   |
+|  /lib/x86_64-linux-gnu/libnss_files-2.23.so |   3   |                                   530, 436, 646                                   |
+|         /proc/sys/kernel/ngroups_max        |   2   |                                      563, 566                                     |
+|        /home/user/test/user_file.txt        |   4   |                               1162, 1520, 2192, 2196                              |
+|            /home/user/test/in.txt           |   2   |                                      217, 219                                     |
+|                 /etc/wgetrc                 |   3   |                                   592, 593, 594                                   |
+|                /etc/localtime               |   6   |                           683, 685, 960, 962, 1274, 1276                          |
++---------------------------------------------+-------+-----------------------------------------------------------------------------------+
