@@ -34,16 +34,79 @@ def main():
     if exercise == "a":
         exerciseA(logFileA, logFileB, logFileC)
     else:
-        exerciseB(logFileA, logFileB, outfileName)
+        exerciseB(logFileB)
+
+
+def exerciseB(logFileB):
+    # So we know this is gonna be working with log B because it's the only one that has an fchmodat event
+    # And it's on "remote_shell.elf" lmao
+
+    # First we need "open-write-close sequences"
+    print("Open-Write-Close sequences from Log A:\n")
+    printTripleSequences(["open(", "write(", "close("], logFileB)
 
 
 def exerciseA(logFileA, logFileB, logFileC):
+    # Outputs A & B
     print("Stat-Clone sequences from Log A:\n")
     printStatNumSequences(logFileA)
     print("Stat-Clone sequences from Log B:\n")
     printStatNumSequences(logFileB)
     print("Stat-Clone sequences from Log C:\n")
     printStatNumSequences(logFileC)
+
+    # Output C
+    print("Open-Getdents-Close sequences from Log A:\n")
+    printTripleSequences(["open(", "getdents(", "close("], logFileA)
+    print("Open-Getdents-Close sequences from Log B:\n")
+    printTripleSequences(["open(", "getdents(", "close("], logFileB)
+    print("Open-Getdents-Close sequences from Log C:\n")
+    printTripleSequences(["open(", "getdents(", "close("], logFileA)
+
+
+# Takes in a list of events ["clone", "stat", "write"] etc
+# Prints corresponding sequences of events
+def printTripleSequences(sequence: list, logFile):
+    # last seen info for stat
+    pids = [None, None, None]
+    timestamps = [None, None, None]
+    events = [None, None, None]
+    keywords = [False, False, False]
+
+    for timestamp, line in enumerate(logFile, start=1):
+        pid = line.split(" ")[0]
+
+        if sequence[0] in line:
+            pids[0] = pid
+            timestamps[0] = timestamp
+            events[0] = line
+            keywords[0] = True
+        elif sequence[1] in line:
+            if keywords[0]:
+                if pids[0] == pid:
+                    pids[1] = pid
+                    timestamps[1] = timestamp
+                    events[1] = line
+                    keywords[1] = True
+        elif sequence[2] in line:
+            if keywords[0] and keywords[1]:
+                if (pids[0] == pid) and (pids[1] == pid):
+                    pids[2] = pid
+                    timestamps[2] = timestamp
+                    events[2] = line
+                    keywords[2] = True
+
+        # Check for a valid subsequence, if valid clear out the vars
+        if keywords[0] and keywords[1] and keywords[2]:
+            print(
+                f"Valid Sequence:\nFirst Event: '{events[0].strip()}'\nTimestamp: {timestamps[0]}\nSecond Event: '{events[1].strip()}'\nTimestamp: {timestamps[1]}\nThird Event: '{events[2].strip()}'\nTimestamp: {timestamps[2]}\n"
+            )
+
+            # Clear
+            pids = [None, None, None]
+            timestamps = [None, None, None]
+            events = [None, None, None]
+            keywords = [False, False, False]
 
 
 def printStatNumSequences(logFile):
@@ -99,10 +162,6 @@ def printStatNumSequences(logFile):
             clone_pid = None
             clone_timestamp = None
             clone_event = None
-
-
-def exerciseB(logFileA, logFileB, outFileName):
-    print("What the sigma?")
 
 
 # Loads a file and returns the lines in a collection
