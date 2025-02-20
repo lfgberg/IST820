@@ -45,6 +45,18 @@ def exerciseB(logFileB):
     print("Open-Write-Close sequences from Log A:\n")
     printTripleSequences(["open(", "write(", "close("], logFileB)
 
+    # fchmodat instaces
+    fchmodat_events = findTermInLog(logFileB, ["fchmodat("])
+
+    for event in fchmodat_events:
+        print(f"Fchmodat Event: '{event}'\n")
+
+    # execve instaces
+    execve_events = findTermInLog(logFileB, ["execve("])
+
+    for event in execve_events:
+        print(f"Execve Event: '{event}'\n")
+
 
 def exerciseA(logFileA, logFileB, logFileC):
     # Outputs A & B
@@ -162,6 +174,18 @@ def printStatNumSequences(logFile):
             clone_pid = None
             clone_timestamp = None
             clone_event = None
+
+
+# Returns each line of a file containing one or more given terms in a list of lists
+# [[line, timestamp], [line, timestamp]]
+def findTermInLog(logFile, terms):
+    result = []
+
+    for timestamp, line in enumerate(logFile, start=1):
+        if any(term in line for term in terms):
+            result.append([line.strip(), timestamp])
+
+    return result
 
 
 # Loads a file and returns the lines in a collection
